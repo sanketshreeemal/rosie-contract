@@ -25,9 +25,9 @@ export const Slider: React.FC<SliderProps> = ({
   const percentage = ((value - min) / (max - min)) * 100;
 
   return (
-    <div className="relative w-full pb-6"> 
+    <div className="relative w-full pb-5"> 
       {/* Header Row */}
-      <div className="flex items-baseline space-x-2 sm:space-x-3 mb-2 sm:mb-3">
+      <div className="flex items-baseline space-x-2 sm:space-x-3 mb-1.5 sm:mb-2">
         <label className="text-xs sm:text-sm font-bold text-slate-700 tracking-wide uppercase">{label}</label>
         {description && (
           <span className="text-[10px] sm:text-xs text-slate-500 font-medium truncate">{description}</span>
@@ -71,7 +71,7 @@ export const Slider: React.FC<SliderProps> = ({
 
         {/* Moving Value Label */}
         <motion.div 
-           className="absolute top-6 flex flex-col items-center pointer-events-none z-10"
+           className="absolute top-5 flex flex-col items-center pointer-events-none z-10"
            style={{ left: `${percentage}%` }}
            initial={false}
            animate={{ left: `${percentage}%` }}
